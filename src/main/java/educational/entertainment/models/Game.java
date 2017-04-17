@@ -36,7 +36,6 @@ public class Game {
 	public ArrayList<Game> getGames(int cid) throws SQLException
 	{
 		ArrayList allGames=new ArrayList<Game>();
-		//System.out.println("SELECT gameName from games where courseID=?");
 	    Connection con=DbConnection.getCon();  
 	    String query="SELECT * from educationalwebsite.games where courseID= ?";
 	    PreparedStatement ps =con.prepareStatement(query);
@@ -51,6 +50,7 @@ public class Game {
 	    	allGames.add(g);
 	    	
 	    }
+	    
 	    return allGames;
 	}
 }

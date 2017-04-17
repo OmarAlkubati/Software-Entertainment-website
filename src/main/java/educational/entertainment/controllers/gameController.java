@@ -33,12 +33,11 @@ public class gameController {
 		request.setAttribute("allgames",allgames);
 		
 		HttpSession s = request.getSession(true);
-<<<<<<< HEAD
+
 		s.setAttribute("Session_Var", "DONE and FUCK U");
-=======
+
 		s.setAttribute("Session_Var", "DONE ");
->>>>>>> Second commit
-		
+
 		return "hhh";
 	}
 	
