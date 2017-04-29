@@ -13,14 +13,11 @@
 	
 	// print the information about every category of the list
 	for(Game game : list) { %>
-	   <a href="/playgame?gameid=<%=game.gameId%>" style="font-size:30px;"> <%= game.gameName%></a>
+	   <a href="/playgame?gameid=<%=game.getGameId() %>" style="font-size:30px;">
+	    <%= game.getGameName() %></a>
 	    <br/>
 	<% } %>
 	
-	<% String str= session.getAttribute("Session_Var").toString();
-		out.print("*******Session_Var= "+ str);
-	%>
 	
-	<form action="hel.jsp"><input type="submit" value="sdsd"/></form>
 </body>
 </html>

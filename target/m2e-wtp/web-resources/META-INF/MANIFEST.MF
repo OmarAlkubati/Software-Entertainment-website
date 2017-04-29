@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: educational.entertainment1
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Lenovo
+Built-By: Zoro
 Implementation-Vendor-Id: educational.entertainment
-Build-Jdk: 1.8.0_121
+Build-Jdk: 1.8.0_101
 Implementation-URL: http://projects.spring.io/spring-boot/educational.
  entertainment1/
 Created-By: Maven Integration for Eclipse

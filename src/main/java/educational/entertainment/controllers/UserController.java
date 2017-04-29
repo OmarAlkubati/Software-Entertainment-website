@@ -6,9 +6,11 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.mysql.jdbc.Connection;
 
 import educational.entertainment.models.Student;
+import educational.entertainment.models.Teacher;
 import educational.entertainment.models.User;
 
 
@@ -34,53 +37,97 @@ public class UserController  extends HttpServlet  {
     
 	@RequestMapping("/")
 	public String add(){
-		System.out.println("\n\nhelllllllllllllllllllllllllllllllllllllllllllllllllllo\n\n");
-		return "hel";
+		
+		return "register";
 	}
 	
 	
 	@RequestMapping("/signup")
-	public String Signup(@RequestParam("email") String email,HttpServletRequest req) throws SQLException,ServletException, IOException
+	public String Signup(HttpServletResponse resp,@RequestParam("email") String email,@RequestParam("name") String name,
+			@RequestParam("password") String pass,@RequestParam("age") String age,
+			@RequestParam("type") int type,HttpServletRequest req) throws SQLException,ServletException, IOException
 	{
 		user=new Student();
-	boolean isExist=user.Search(email);
-		
+	    boolean isExist=user.Search(email);
+	    user=new Teacher();
+	    boolean isExist2=user.Search(email);
 	//String attributeName = req.getParameter("attributeName");
     //String attributeValue = req.getParameter("attributeValue");
-    req.getSession().setAttribute("email", email);
-        //  resp.sendRedirect(req.getContextPath() + "/");
-		if(!isExist)
+   // req.getSession().setAttribute("email", email);
+   //  resp.sendRedirect(req.getContextPath() + "/");
+		if(!isExist && !isExist2)
 		{
-			user.setEmail(email);
-			user.Signup(user);
-			return "login";
+			if(type==1){
+				user=new Student();
+				user.setEmail(email);
+				user.setName(name);
+				user.setPassword(pass);
+				user.setAge(age);
+				user=user.Signup(user);
+				HttpSession s=req.getSession();
+				s.setAttribute("user", user);
+				s.setAttribute("type", "student");
+				System.out.println("Emaillllll = "+user.getName()+"  "+user.getId());
+				return "redirect:/studentacheivements";
+			}
+			else if(type==2){
+				user=new Teacher();
+				user.setEmail(email);
+				user.setName(name);
+				user.setPassword(pass);
+				user.setAge(age);
+				user=user.Signup(user);
+				HttpSession s=req.getSession();
+				s.setAttribute("user", user);
+				s.setAttribute("type", "teacher");
+				System.out.println("Emaillllll = "+user.getName()+"  "+user.getId());
+				
+				resp.sendRedirect("/showmycourse");
+			}
 		}
 		
-		else
-		{
-			return "index";
-		}
+		return "register";
+	
+		
+		
 		
 	}
 	
-@RequestMapping("/login")
-	
-	public String Login(@RequestParam("email") String email,HttpServletRequest req)/*,@RequestParam("password") String pass)*/ throws SQLException
+   
+	@RequestMapping("/login")
+	public String Login(HttpServletRequest req,HttpServletResponse resp,@RequestParam("email") String email,@RequestParam("password") String pass) throws SQLException, ServletException, IOException
 	{
-	    HttpSession s=req.getSession();
-	    System.out.println("Email = "+s.getAttribute("email"));
+	    //HttpSession s=req.getSession();
+	  //  System.out.println("Email = "+s.getAttribute("email"));
+		HttpSession s=req.getSession();
 		user=new Student();
-	    user=user.Login(email," ");
+	    user=user.Login(email,pass);
 		if(user!=null)
 		{
-			System.out.println("Emaillllll = "+user.getEmail());
-			return "index2";
+			
+			System.out.println("Emaillllll = "+user.getName());
+		    s=req.getSession();
+			s.setAttribute("user", user);
+			s.setAttribute("type", "student");
+			return "redirect:/studentacheivements";
 		}
-		
-		else
+		user=new Teacher();
+	    user=user.Login(email,pass);
+	    if(user!=null)
 		{
-			return "index";
+			
+			System.out.println("Emaillllll = "+user.getName());
+		    s=req.getSession();
+			s.setAttribute("user", user);
+			s.setAttribute("type", "teacher");
+			  /*RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/showmycourse");
+              dispatcher.forward(req,resp);*/
+			resp.sendRedirect("/showmycourse");
 		}
+	     	
+			
+			return "register";
+		
 	}
 	
 }

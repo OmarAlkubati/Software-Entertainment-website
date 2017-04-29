@@ -7,7 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
 <form action="/addingcourse">
+=======
+<form action="/addcourse" method="post">
+>>>>>>> Fourth Version
 		CourseName <input type="text" name="name" /><br/>
 		CourseAge <input type="text" name="age" /><br/>
 		CourseDescription <input type="text" name="description" /><br/>

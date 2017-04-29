@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan(basePackages = "educational.entertainment.controllers")
 @ComponentScan(basePackages = "educational.entertainment.models")
-
 @SpringBootApplication
 public class MainController {
 

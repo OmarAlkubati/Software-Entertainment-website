@@ -9,10 +9,37 @@ import org.springframework.stereotype.Repository;
 
 public class User {
 
+	protected int id;
 	protected String email;
     protected String password;
+    protected String name;
+    protected String age;
+    
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getEmail() {
 		return email;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
 	}
 
 	public void setEmail(String email) {
@@ -32,8 +59,9 @@ public class User {
 		return true;
 	}
 	
-	public void Signup(User u)throws SQLException 
-	{}
+	public User Signup(User u)throws SQLException 
+	{
+		return u;}
 	
 	public User Login(String email, String pass) throws SQLException
 	{
