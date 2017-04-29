@@ -11,6 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href="css/rtl.css">
     <link rel='stylesheet' href="style33.css">
+<<<<<<< HEAD
+=======
+     <link rel='stylesheet' href="style.css">
+>>>>>>> 7th V
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
@@ -38,7 +42,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+<<<<<<< HEAD
       <a class="navbar-brand" href="#">Educational <span>Website</span></a>
+=======
+      <a id="navlogo" class="navbar-brand" href="#">Educational <span>Website</span></a>
+>>>>>>> 7th V
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,6 +70,7 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
+<<<<<<< HEAD
     <div class="item active">
       <img src="fff2.jpg">
       <div class="carousel-caption">
@@ -79,10 +88,31 @@
         <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
        <a   href="/showallcourse" class="btn btn-default" data-toggle="modal">View All Courses</a>
        <a href="/addcourse" class="btn btn-default" data-toggle="modal" style="padding-left:30px;padding-right:30px;">Add Course</a>  
+=======
+    <div class="item active" style="margin-top:50px;">
+      <img src="fff2.jpg">
+      <div class="carousel-caption" style="right:10%;bottom:25%;">
+           <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
+        <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
+        <a   href="/showallcourse" class="btn btn-default" data-toggle="modal">View Courses</a>
+        <a href="/addcourse" class="btn btn-default" data-toggle="modal" >Add Course</a>      
+      </div>
+    </div>
+      
+    <div class="item" style="margin-top:50px;">
+     <img src="fff2.jpg">
+      <div class="carousel-caption" style="right:10%;bottom:25%;">
+          <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
+        <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
+         
+       <a   href="/showallcourse" class="btn btn-default" data-toggle="modal">View Courses</a>
+       <a href="/addcourse" class="btn btn-default" data-toggle="modal">Add Course</a>  
+>>>>>>> 7th V
           
       </div>
     </div>
       
+<<<<<<< HEAD
       <div class="item">
        <img src="fff2.jpg">
       <div class="carousel-caption">
@@ -90,6 +120,15 @@
         <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
          <a href="/showallcourse" class="btn btn-default" data-toggle="modal">View All Courses</a>  
          <a href="/addcourse" class="btn btn-default" data-toggle="modal" style="padding-left:30px;padding-right:30px;">Add Course</a>
+=======
+      <div class="item" style="margin-top:50px;">
+       <img src="fff2.jpg">
+      <div class="carousel-caption" style="right:10%;bottom:25%;">
+            <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
+        <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
+         <a href="/showallcourse" class="btn btn-default" data-toggle="modal">View Courses</a>  
+         <a href="/addcourse" class="btn btn-default" data-toggle="modal" >Add Course</a>
+>>>>>>> 7th V
       </div>
     </div>
   </div>
@@ -142,11 +181,19 @@
        </div>
     </section>
 
+<<<<<<< HEAD
 <% ArrayList<Course> list = (ArrayList<Course>) request.getAttribute("allcourses");  int i=0;%>
 <section class="TeacherCourses text-center">
 <%if(!list.isEmpty())%><h3> Your Courses </h3>
 
  <% for(Course course : list) { i++; %>
+=======
+<% ArrayList<Course> list = (ArrayList<Course>) request.getAttribute("allcourses");%>
+<section class="TeacherCourses text-center">
+<%if(!list.isEmpty())%><h3> Your Courses </h3>
+
+ <% for(Course course : list) { %>
+>>>>>>> 7th V
     <div class="container">
        <div class="row">
  
@@ -156,7 +203,11 @@
                 <h4><%=course.getName()%></h4>    
                <p style="height:250px;overflow:scroll;"><%=course.getDescription() %></p>
                 <a href="/addgame?courseid=<%=course.getCourseID()%>" class="btn btn-default" data-toggle="modal" style="margin-bottom:5px;padding:7px;padding-left:70px;padding-right:70px;background-color:#4D4E53;font-size:15px;color:#E8E9D7">Add Game</a> 
+<<<<<<< HEAD
                 <a id="<%= i %>" href="/showgames?courseid=<%=course.getCourseID()%>"  class="btn btn-default" data-toggle="modal" style="margin-bottom:5px;padding:7px;padding-left:52px;padding-right:52px;background-color:#C13832;font-size:15px;color:#E8E9D7">View All Games</a>
+=======
+                <a href="/showgames?courseid=<%=course.getCourseID()%>" class="btn btn-default" data-toggle="modal" style="margin-bottom:5px;padding:7px;padding-left:52px;padding-right:52px;background-color:#C13832;font-size:15px;color:#E8E9D7">View All Games</a>
+>>>>>>> 7th V
            </div>
            
         </div>

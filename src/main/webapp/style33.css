@@ -262,4 +262,30 @@ padding: 15px
     border-radius: 10px;
     margin-top: 105px;
     margin-bottom: 225px;
+<<<<<<< HEAD
+=======
+}
+.courseform
+{
+    background-color:rgba(232, 233, 215,.5);
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 105px;
+    margin-bottom: 225px;
+}
+
+@media (max-width: 767px)
+{
+    #navlogo
+    {
+        font-size: 15px;
+    }
+    
+    .carousel-caption .btn
+    {
+        display: inline;
+    }
+   
+>>>>>>> 7th V
 }

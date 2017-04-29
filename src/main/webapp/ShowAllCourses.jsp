@@ -62,7 +62,11 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
+<<<<<<< HEAD
     <div class="item active">
+=======
+    <div class="item active" style="margin-top:50px;">
+>>>>>>> 7th V
       <img src="fff2.jpg">
       <div class="carousel-caption">
            <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
@@ -73,7 +77,11 @@
       </div>
     </div>
       
+<<<<<<< HEAD
     <div class="item">
+=======
+    <div class="item" style="margin-top:50px;">
+>>>>>>> 7th V
      <img src="fff2.jpg">
       <div class="carousel-caption">
           <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
@@ -84,7 +92,11 @@
       </div>
     </div>
       
+<<<<<<< HEAD
       <div class="item">
+=======
+      <div class="item" style="margin-top:50px;">
+>>>>>>> 7th V
        <img src="fff2.jpg">
       <div class="carousel-caption">
             <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.

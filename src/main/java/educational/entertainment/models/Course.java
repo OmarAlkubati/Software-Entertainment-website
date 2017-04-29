@@ -11,10 +11,14 @@ public class Course
 	
 	private String name , description , age;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private int CourseID;
 =======
 	private int CourseID,teacherid;
 >>>>>>> Fourth Version
+=======
+	private int CourseID,teacherid;
+>>>>>>> 7th V
 	public Course()
 	{
 		name = "";
@@ -36,22 +40,29 @@ public class Course
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public void AddCourse(String name , String des , String age) throws SQLException
 	{
 		
 		Connection con = DbConnection.getCon();
 		String query="INSERT INTO course (name,age,description,CourseID) VALUES (?,?,?)";
 =======
+=======
+>>>>>>> 7th V
 	public void AddCourse(String name , String des , String age,int id) throws SQLException
 	{
 		Course c=new Course();
 		Connection con = DbConnection.getCon();
 		String query="INSERT INTO course (name,age,description,teacherid) VALUES (?,?,?,?)";
+<<<<<<< HEAD
 >>>>>>> Fourth Version
+=======
+>>>>>>> 7th V
 		PreparedStatement ps =con.prepareStatement(query);
 		ps.setString(1, name);
 		ps.setString(2, age);
 		ps.setString(3, des);
+<<<<<<< HEAD
 <<<<<<< HEAD
 		ps.executeUpdate();
 =======
@@ -59,11 +70,17 @@ public class Course
 		ps.executeUpdate();
        // SELECT MAX(idcourse)  FROM educationalwebsite.course
 >>>>>>> Fourth Version
+=======
+		ps.setInt(4, id);
+		ps.executeUpdate();
+       // SELECT MAX(idcourse)  FROM educationalwebsite.course
+>>>>>>> 7th V
 	}
 	public Course retrivecourse(int id) throws SQLException
 	{
 		Course c = new Course();
 	    Connection con = DbConnection.getCon();  
+<<<<<<< HEAD
 <<<<<<< HEAD
 	    String query="SELECT * from educationalwebsite.games where CourseID= ?";
 	    PreparedStatement ps =con.prepareStatement(query);
@@ -76,6 +93,8 @@ public class Course
 	    return c;
 	}
 =======
+=======
+>>>>>>> 7th V
 	    String query="SELECT * from educationalwebsite.course where idcourse= ?";
 	    PreparedStatement ps =con.prepareStatement(query);
 	    ps.setInt(1, id);
@@ -108,16 +127,23 @@ public class Course
 	    }
 	    return mycourses;
 	}
+<<<<<<< HEAD
 >>>>>>> Fourth Version
+=======
+>>>>>>> 7th V
 	public ArrayList<Course> getcourses(int id) throws SQLException
 	{
 		ArrayList allcourses = new ArrayList<Course>();
 	    Connection con=DbConnection.getCon();
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    String query="SELECT * from educationalwebsite.games where TeacherID= ?";
 =======
 	    String query="SELECT * from educationalwebsite.course where teacherid= ?";
 >>>>>>> Fourth Version
+=======
+	    String query="SELECT * from educationalwebsite.course where teacherid= ?";
+>>>>>>> 7th V
 	    PreparedStatement ps =con.prepareStatement(query);
 	    ps.setInt(1, id);
 	    ResultSet rs=  ps.executeQuery();
@@ -125,10 +151,14 @@ public class Course
 	    {
 	    	Course c = new Course();
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    	c.CourseID = rs.getInt("CourseID");
 =======
 	    	c.CourseID = rs.getInt("idcourse"); 
 >>>>>>> Fourth Version
+=======
+	    	c.CourseID = rs.getInt("idcourse"); 
+>>>>>>> 7th V
 	    	c.name = rs.getString("name");
 	    	c.age = rs.getString("age");
 	    	c.description = rs.getString("description"); 	
@@ -162,10 +192,16 @@ public class Course
 		CourseID = courseID;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	public int getteacherid() {
 		return teacherid;
 	}
 >>>>>>> Fourth Version
+=======
+	public int getteacherid() {
+		return teacherid;
+	}
+>>>>>>> 7th V
 	
 }

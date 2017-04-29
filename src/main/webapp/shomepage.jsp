@@ -11,6 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href="css/rtl.css">
     <link rel='stylesheet' href="style33.css">
+<<<<<<< HEAD
+=======
+    <link rel='stylesheet' href="style.css">
+>>>>>>> 7th V
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
@@ -62,32 +66,59 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
+<<<<<<< HEAD
     <div class="item active">
       <img src="fff2.jpg">
       <div class="carousel-caption">
            <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
         <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
         <a   href="/showallcourse" class="btn btn-default" data-toggle="modal">View All Courses</a>
+=======
+    <div class="item active" style="margin-top:50px;">
+      <img src="fff2.jpg">
+      <div class="carousel-caption" style="bottom:25%;">
+           <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
+        <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
+        <a   href="/showallcourse" class="btn btn-default" data-toggle="modal">View Courses</a>
+>>>>>>> 7th V
              
       </div>
     </div>
       
+<<<<<<< HEAD
     <div class="item">
      <img src="fff2.jpg">
       <div class="carousel-caption">
           <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
         <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
        <a   href="/showallcourse" class="btn btn-default" data-toggle="modal">View All Courses</a>  
+=======
+    <div class="item" style="margin-top:50px;">
+     <img src="fff2.jpg">
+      <div class="carousel-caption" style="bottom:25%;">
+          <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
+        <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
+       <a   href="/showallcourse" class="btn btn-default" data-toggle="modal">View Courses</a>  
+>>>>>>> 7th V
           
       </div>
     </div>
       
+<<<<<<< HEAD
       <div class="item">
        <img src="fff2.jpg">
       <div class="carousel-caption">
             <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
         <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
          <a href="/showallcourse" class="btn btn-default" data-toggle="modal">View All Courses</a>  
+=======
+      <div class="item" style="margin-top:50px;">
+       <img src="fff2.jpg">
+      <div class="carousel-caption" style="bottom:25%;">
+            <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
+        <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
+         <a href="/showallcourse" class="btn btn-default" data-toggle="modal">View Courses</a>  
+>>>>>>> 7th V
         
       </div>
     </div>
@@ -142,6 +173,7 @@
     </section>
 
 
+<<<<<<< HEAD
  
     <div class="container">
        <div class="row">
@@ -161,6 +193,28 @@
                   <%=AL.get(i).getGameName() %>70%
               </div>
            </div>
+=======
+   <section>
+    <div class="container">
+       <div class="row" style="padding-top:30px;">
+       <h2 class="col-lg-12 text-center" style="margin-bottom:50px;" >Achievements</h2>
+       <% ArrayList<Achievement> AL=( ArrayList<Achievement>)request.getAttribute("Ach");
+       for(int i=0;i<AL.size();i++){
+    	   
+    	   double x;
+         if(AL.get(i).getScore()!=0)
+        	 x=(((double)AL.get(i).getScore())/300.0)*100.0;
+        	else x=0;%>
+  		<p> </p>
+  	
+        <div class="col-lg-6" style="margin-bottom:40px;">
+         <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%=x%>%;background-color:#C13832">
+              <p style="color:black"><%=AL.get(i).getScore()%><%=AL.get(i).getGameName()%> </p>
+           </div>
+         </div>  
+            
+>>>>>>> 7th V
        </div>
        <% } %>
         

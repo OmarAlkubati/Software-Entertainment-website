@@ -221,4 +221,22 @@ padding: 15px
 {
     font-size: 20px;
     color:#E8E9D7;
+<<<<<<< HEAD
+=======
+}
+
+
+@media (max-width: 767px)
+{
+    #navlogo
+    {
+        font-size: 15px;
+    }
+    
+    .carousel-caption .btn
+    {
+        display: inline;
+    }
+   
+>>>>>>> 7th V
 }

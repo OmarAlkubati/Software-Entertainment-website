@@ -1,0 +1,15 @@
+
+@media (max-width: 767px)
+{
+    #navlogo
+    {
+        font-size: 15px;
+    }
+    
+    .carousel-caption .btn
+    {
+        display: inline;
+    }
+    
+   
+}

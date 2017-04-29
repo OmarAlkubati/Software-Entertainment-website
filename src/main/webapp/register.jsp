@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href="css/rtl.css">
     <link rel='stylesheet' href="style3.css">
+<<<<<<< HEAD
+=======
+     <link rel='stylesheet' href="style.css">
+>>>>>>> 7th V
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
@@ -28,7 +32,11 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" >
+<<<<<<< HEAD
       <a class="navbar-brand" href="#">Educational <span>Website</span></a>
+=======
+      <a id="navlogo" class="navbar-brand" href="#">Educational <span>Website</span></a>
+>>>>>>> 7th V
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,9 +56,15 @@
     </div>
     <div class="modal-body">
   <div class="form-group">
+<<<<<<< HEAD
     <label for="inputEmail3" class="col-lg-2 control-label" >Email</label>
     <div class="col-lg-10">
       <input type="email" id="e" class="form-control"  name="email" placeholder="Email">
+=======
+    <label for="inputEmail3" class="col-lg-2 control-label">Email</label>
+    <div class="col-lg-10">
+      <input type="email" class="form-control"  name="email" placeholder="Email">
+>>>>>>> 7th V
     </div>
   </div>
 
@@ -58,7 +72,11 @@
   <div class="form-group">
     <label for="password" class="col-lg-2 control-label">Password</label>
     <div class="col-lg-10">
+<<<<<<< HEAD
       <input type="password" id = "p" class="form-control" name="password" placeholder="password">
+=======
+      <input type="password" class="form-control" name="password" placeholder="password">
+>>>>>>> 7th V
     </div>
   </div>
 
@@ -66,7 +84,11 @@
   <div class="modal-footer">
       <a href="#" class="btn btn-default" data-dismiss="modal">Close it</a>
       
+<<<<<<< HEAD
       <button id ="l"  type="submit" class="btn btn-primary">Login</button>
+=======
+      <button type="submit" class="btn btn-primary">Login</button>
+>>>>>>> 7th V
     </div>
 
     
@@ -93,21 +115,33 @@
   <div class="form-group">
     <label for="inputEmail3" class="col-lg-2 control-label">Email</label>
     <div class="col-lg-10">
+<<<<<<< HEAD
       <input id ="E" type="email" class="form-control"  name="email" placeholder="Email">
+=======
+      <input type="email" class="form-control"  name="email" placeholder="Email">
+>>>>>>> 7th V
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-lg-2 control-label">Name</label>   
     <div class="col-lg-10">
+<<<<<<< HEAD
       <input id="N" type="text" class="form-control"  name="name" placeholder="Name">
+=======
+      <input type="text" class="form-control"  name="name" placeholder="Name">
+>>>>>>> 7th V
     </div>
   </div>
  
   <div class="form-group">
     <label for="password" class="col-lg-2 control-label">Password</label>
     <div class="col-lg-10">
+<<<<<<< HEAD
       <input id= "P" type="password" class="form-control" name="password" placeholder="password">
+=======
+      <input type="password" class="form-control" name="password" placeholder="password">
+>>>>>>> 7th V
     </div>
   </div>
     
@@ -115,15 +149,24 @@
   <div class="form-group">
     <label class="col-lg-2 control-label">Age</label>
     <div class="col-lg-10">
+<<<<<<< HEAD
       <input id= "A" type="number" class="form-control" name="age" placeholder="Age">
+=======
+      <input type="number" class="form-control" name="age" placeholder="Age">
+>>>>>>> 7th V
     </div>
   </div>
     
     
   <div class="form-group">
     <div class="col-sm-offset-3">
+<<<<<<< HEAD
      <label id ="t1" class="checkbox-inline "><input type="radio" name="type" value="1">Student</label>
      <label id= "t2" class="checkbox-inline "><input type="radio" name="type" value="2">Teacher</label>
+=======
+     <label class="checkbox-inline "><input type="radio" name="type" value="1">Student</label>
+     <label class="checkbox-inline "><input type="radio" name="type" value="2">Teacher</label>
+>>>>>>> 7th V
     </div>
    
   </div>
@@ -133,7 +176,11 @@
   <div class="modal-footer">
       <a href="#" class="btn btn-default" data-dismiss="modal">Close it</a>
       
+<<<<<<< HEAD
       <button id ="s" type="submit" class="btn btn-primary">Sign Up</button>
+=======
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+>>>>>>> 7th V
     </div>
 
     
@@ -153,18 +200,31 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
+<<<<<<< HEAD
     <div class="item active">
+=======
+    <div class="item active" style="margin-top:50px;">
+>>>>>>> 7th V
       <img src="fff2.jpg">
       <div class="carousel-caption">
         <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
         <a href="#aboutwebsite" style="margin-left:5px;font-size:15px;color:#80bfff">see more...</a> </p>
+<<<<<<< HEAD
         <a   id = "2" href="#signupform" class="btn btn-default" data-toggle="modal">Sign Up</a> 
         <a   id ="1" href="#loginform" class="btn btn-default" data-toggle="modal">Login</a> <br><br>
+=======
+        <a   href="#signupform" class="btn btn-default" data-toggle="modal">Sign Up</a> 
+        <a   href="#loginform" class="btn btn-default" data-toggle="modal">Login</a> <br><br>
+>>>>>>> 7th V
          
       </div>
     </div>
       
+<<<<<<< HEAD
     <div class="item">
+=======
+    <div class="item" style="margin-top:50px;">
+>>>>>>> 7th V
      <img src="fff2.jpg">
       <div class="carousel-caption">
         <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
@@ -175,7 +235,11 @@
       </div>
     </div>
       
+<<<<<<< HEAD
       <div class="item">
+=======
+      <div class="item" style="margin-top:50px;">
+>>>>>>> 7th V
        <img src="fff2.jpg">
        <div class="carousel-caption">
         <p>This is game-based educational platform. This platform help students to understand basic educational concepts while playing simple games. These concepts are related to subjects like programming ,science and math.
